@@ -18,10 +18,11 @@ db = client.martiansDB
 @app.route("/")
 def index():
 
-    mars_data = db.mars_collection.find_one()
-
+    # old mars data is stored in a different collection, to visualize the changes between
+    # newly scraped data and previous data
+    old_mars_data = db.old_mars_collection.find_one()
     # Render html
-    return render_template("index.html", mars_data=mars_data)
+    return render_template("index.html", mars_data=old_mars_data, text="Previous stored data in mongoDB: ")
 
 @app.route("/scrape")
 def scrape():
@@ -31,7 +32,10 @@ def scrape():
         scraped_data,
         upsert=True
     )
-    return redirect("http://localhost:5000/", code=302)
+    mars_data = db.mars_collection.find_one()
+    #return redirect("http://localhost:5000/", code=302)
+    return render_template("index.html", mars_data=mars_data, text="Newly Scraped Data: ")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
