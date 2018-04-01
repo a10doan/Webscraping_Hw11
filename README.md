@@ -14,6 +14,6 @@ according to the HTML structure.
 (Note: apikeys file required for access to Twitter API)
 
 
-![](images/Capture1.png)
+![](images/Capture1.PNG)
 __________________________________________________________________________________________________________________________________________
 
