@@ -1,4 +1,4 @@
-## Unit 11 | Assignment - Mars Landing
+## Unit 11 | Mars Landing
 
 Skills Tested: MongoDB, Flask application, HTML, Webscraping (BeautifulSoup4, Splinter, Selenium, Twitter API/Search)
 
@@ -11,7 +11,9 @@ Coding was initially done in Jupyter Notebooks, and then copied to a python (.py
 (Mongo Compass was used to check successful DB upload).  Flask application was then used to pull information from the Mongo Database, and loaded onto a local connection.  When the HTML file/structure was loading onto the local host connection, it pulled the data from the Flask app, and loaded the information 
 according to the HTML structure. 
 
+(Note: apikeys file required for access to Twitter API)
 
 
+![](images/Capture1.png)
 __________________________________________________________________________________________________________________________________________
 
